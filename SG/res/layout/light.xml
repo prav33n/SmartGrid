@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+ <RelativeLayout 
+    android:id="@+id/containerlight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/controlname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="65dp"
+        android:background="#ADADA7"
+        android:gravity="center_horizontal"
+        android:text="Brightness"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ToggleButton
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="23dp"
+        android:text="ToggleButton" />
+
+    <SeekBar
+        android:id="@+id/lumins"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/controlname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lumins"
+        android:layout_marginTop="15dp"
+        android:background="#ADADA7"
+        android:gravity="center_horizontal"
+        android:text="Presets"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RadioGroup
+        android:id="@+id/presets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Movies" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Games" />
+
+        <RadioButton
+            android:id="@+id/Ambient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambient" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/presets"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="#ADADA7"
+        android:gravity="center_horizontal"
+        android:text="Colors"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/containerlight"
+        android:background="#FF3030"
+        android:onClick="setcolor"
+        android:tag="red" />
+
+    <Button
+        android:id="@+id/Button01"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/button1"
+        android:background="#0066FF"
+        android:onClick="setcolor"
+        android:tag="blue" />
+
+    <Button
+        android:id="@+id/Button02"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Button01"
+        android:layout_alignBottom="@+id/Button01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:background="#47FF47"
+        android:onClick="setcolor"
+        android:tag="green" />
+
+    <Button
+        android:id="@+id/Button03"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Button02"
+        android:layout_alignBottom="@+id/Button02"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/Button02"
+        android:background="#FFFF00"
+        android:onClick="setcolor"
+        android:tag="yellow" />
+
+    <Button
+        android:id="@+id/Button04"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Button03"
+        android:layout_alignBottom="@+id/Button03"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/Button03"
+        android:background="#00FFFF"
+        android:onClick="setcolor"
+        android:tag="sky" />
+
+    <Button
+        android:id="@+id/colorloop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="20dp"
+        android:onClick="playcolorloop"
+        android:text="Disco mode" />
+
+    <TextView
+        android:id="@+id/devname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/status"
+        android:layout_alignBottom="@+id/status"
+        android:layout_alignLeft="@+id/Button01"
+        android:text="Lights"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/stoploop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/colorloop"
+        android:onClick="stopcolorloop"
+        android:text="Stop Disco mode" />
+       
+  </RelativeLayout>      
+  </ScrollView>
+

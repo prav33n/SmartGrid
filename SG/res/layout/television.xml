@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:onClick="buttonclick"
+        android:tag="Back" >
+ 
+ <RelativeLayout
+     android:id="@+id/innercontainer"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" >
+
+    <ToggleButton
+        android:id="@+id/tvstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="@string/togglebutton" />
+
+    <TextView
+        android:id="@+id/devname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="22dp"
+        android:text="Smart TV" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvstatus"
+        android:layout_marginTop="17dp"
+        android:background="#ADADA7"
+        android:gravity="center_horizontal"
+        android:text="Volume"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/tvvolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/devname"
+        android:layout_alignRight="@+id/tvstatus"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvvolume"
+        android:layout_marginTop="14dp"
+        android:background="#ADADA7"
+        android:gravity="center_horizontal"
+        android:text="Channel/Navigate"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/navup"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:onClick="buttonclick"
+        android:tag="CursorUp"
+        android:text="UP" />
+
+    <Button
+        android:id="@+id/ok"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/navup"
+        android:layout_alignRight="@+id/navup"
+        android:layout_below="@+id/navup"
+        android:onClick="buttonclick"
+        android:tag="Confirm"
+        android:text="OK" />
+
+    <Button
+        android:id="@+id/navdown"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ok"
+        android:layout_below="@+id/ok"
+        android:onClick="buttonclick"
+        android:tag="CursorDown"
+        android:text="DOWN" />
+
+    <Button
+        android:id="@+id/left"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ok"
+        android:layout_toLeftOf="@+id/ok"
+        android:onClick="buttonclick"
+        android:tag="CursorLeft"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/right"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ok"
+        android:layout_alignBottom="@+id/ok"
+        android:layout_toRightOf="@+id/ok"
+        android:onClick="buttonclick"
+        android:tag="CursorRight"
+        android:text="Right" />
+
+    <Button
+        android:id="@+id/menu"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:onClick="buttonclick"
+        android:tag="Home"
+        android:text="Home" />
+
+    <Button
+        android:id="@+id/chminus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:onClick="buttonclick"
+        android:tag="ChannelStepUp"
+        android:text="CH +" />
+
+    <Button
+        android:id="@+id/chplus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/navdown"
+        android:layout_alignRight="@+id/chminus"
+        android:layout_marginBottom="16dp"
+        android:onClick="buttonclick"
+        android:tag="ChannelStepDown"
+        android:text="CH -" />
+
+    <Button
+        android:id="@+id/color"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/chplus"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="5dp"
+        android:background="#FF0000"
+        android:onClick="ambilight"
+        android:tag="red" />
+
+    <Button
+        android:id="@+id/cbutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@id/container"
+        android:layout_below="@+id/chplus"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_toLeftOf="@+id/left"
+        android:background="#b94a48"
+        android:onClick="buttonclick"
+        android:tag="RedColour" />
+
+    <Button
+        android:id="@+id/Button01"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/cbutton"
+        android:layout_alignBottom="@+id/cbutton"
+        android:layout_alignLeft="@+id/left"
+        android:background="#468847"
+        android:onClick="buttonclick"
+        android:tag="GreenColour" />
+
+    <Button
+        android:id="@+id/Button02"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/Button01"
+        android:layout_alignBottom="@+id/Button01"
+        android:layout_toRightOf="@+id/Button01"
+        android:background="#f89406"
+        android:onClick="buttonclick"
+        android:tag="YellowColour" />
+
+    <Button
+        android:id="@+id/Button03"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/Button02"
+        android:layout_alignBottom="@+id/Button02"
+        android:layout_toRightOf="@+id/Button02"
+        android:background="#3a87ad"
+        android:onClick="buttonclick"
+        android:tag="BlueColour" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/color"
+        android:layout_alignBottom="@+id/color"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/color"
+        android:background="#0066FF"
+        android:onClick="ambilight"
+        android:tag="blue" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbutton"
+        android:layout_marginTop="5dp"
+        android:background="#ADADA7"
+        android:gravity="center_horizontal"
+        android:text="Ambilighting"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/Button04"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/button1"
+        android:background="#47FF47"
+        android:onClick="ambilight"
+        android:tag="green" />
+
+    <Button
+        android:id="@+id/Button05"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/Button04"
+        android:background="#FFFF00"
+        android:onClick="ambilight"
+        android:tag="yellow" />
+
+    <Button
+        android:id="@+id/Button06"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/Button05"
+        android:background="#00FFFF"
+        android:onClick="ambilight"
+        android:tag="skyblue" />
+
+    <Button
+        android:id="@+id/back"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cbutton"
+        android:layout_alignParentRight="true"
+        android:onClick="buttonclick"
+        android:tag="Back"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/options"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back"
+        android:layout_alignParentRight="true"
+        android:onClick="buttonclick"
+        android:tag="Options"
+        android:text="Opt" />
+        
+</RelativeLayout>       
+</ScrollView>
+
+
